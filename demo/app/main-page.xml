@@ -1,6 +1,63 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page"
   xmlns:ui="nativescript-sticky-switch">
-  <StackLayout class="p-20">
-    <Label text="{{ message }}" class="t-20 text-center c-black" textWrap="true"/>
-  </StackLayout>
+  <GridLayout class="p-20">
+    <StackLayout verticalAlignment="middle">
+        <ui:TNSStickySwitch
+          id="mySwitch1"
+          checked="true"
+          leftText="off"
+          width="100"
+          mode="1"
+          leftIcon="baseline_volume_off_white_36"
+          rightText="on"
+          rightIcon="baseline_volume_up_white_36"
+          textSize="16"
+          selectedTextSize="18"
+          iconSize="70"
+          iconPadding="8"
+          backgroundColor="#FF181821"
+          switchColor="#FF2371FA"
+          textColor="#FF26292D"
+          onColor="#FF2371FA"
+          offColor="#FF181821"
+          circleColor="#FF2371FA"
+          animationDuration="600"
+          animationType="line"
+          textVisible="true"
+          class="m-b-20"
+        />
+
+        <ui:TNSStickySwitch
+          id="mySwitch2"
+          checked="false"
+          width="100"
+          mode="2"
+          leftIcon="baseline_location_off_white_36"
+          rightIcon="baseline_location_on_white_36"
+          iconSize="70"
+          iconPadding="10"
+          backgroundColor="#196AB7"
+          switchColor="#EB5160"
+          animationDuration="600"
+          animationType="line"
+          textVisible="false"
+          class="m-b-10"
+        />
+
+        <ui:TNSStickySwitch
+          id="mySwitch3"
+          checked="false"
+          width="100"
+          leftIcon="baseline_bluetooth_disabled_black_36"
+          rightIcon="baseline_bluetooth_black_36"
+          iconSize="70"
+          iconPadding="10"
+          backgroundColor="#99F7AF"
+          switchColor="#76CB89"
+          animationDuration="1000"
+          animationType="line"
+          textVisible="false"
+        />
+    </StackLayout>
+  </GridLayout>
 </Page>
