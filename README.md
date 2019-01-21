@@ -109,6 +109,48 @@ and in your `Vue` instance you can use the code as follows:
 ```typescript
 ```
 
+## Properties
+
+### android
+
+| Property            | Type      | Description                                                         |
+| ------------------- | --------- | ------------------------------------------------------------------- |
+| `checked`           | `boolean` | value of the switch                                                 |
+| `leftText`          | `string`  | text use as description for the option on the left                  |
+| `rightText`         | `string`  | text use as description for the option on the right                 |
+| `textVisible`       | `boolean` | make text description for the option visible or not `default: True` |
+| `textSize`          | `string`  | options text description size                                       |
+| `selectedTextSize`  | `string`  | option selected text description size                               |
+| `leftIcon`          | `string`  | icon to use for the option on the left                              |
+| `rightIcon`         | `string`  | icon to use for the option on the right                             |
+| `iconSize`          | `string`  | icon size                                                           |
+| `iconPadding`       | `string`  | padding to apply on the icon                                        |
+| `backgroundColor`   | `string`  | switch background color                                             |
+| `switchColor`       | `string`  | switch color                                                        |
+| `textColor`         | `string`  | text description color                                              |
+| `animationDuration` | `number`  | duration animation `e.g. 1000`                                      |
+| `animationType`     | `string`  | animation type to be use during selection: `line` or `curve`        |
+
+### ios
+
+| Property      | Type      | Description                                                         |
+| ------------- | --------- | ------------------------------------------------------------------- |
+| `checked`     | `boolean` | value of the switch                                                 |
+| `mode`        | `number`  | switch mode that will be used `e.g. simple, liquid...` `default: 0` |
+| `onColor`     | `string`  | color to detrmine when the switch is true                           |
+| `offColor`    | `string`  | color to detrmine when the switch is false                          |
+| `circleColor` | `string`  | siwtch circle color                                                 |
+
+#### ios switch mode
+
+use the one of the mode value below to determine which type of switch you want to use
+
+| Option          | value |
+| --------------- | ----- |
+| Simple Swicth   | `0`   |
+| Liquid Switch   | `1`   |
+| Exchnage Swicth | `2`   |
+
 ## Author
 
 Jonathan Mayunga, mayunga.j@gmail.com

@@ -94,19 +94,12 @@ function initializeStickySwitchSelectedListener() {
             const owner = this.owner.get();
 
             if (owner.nativeView.getDirection().toString() === 'LEFT') {
-                owner.onCheckedChanged(false);
+                owner.onCheckedChanged(false, direction, text);
                 // checkedProperty.nativeValueChange(owner, false);
             } else if (owner.nativeView.getDirection().toString() === 'RIGHT') {
                 // checkedProperty.nativeValueChange(owner, true);
-                owner.onCheckedChanged(true);
+                owner.onCheckedChanged(true, direction, text);
             }
-
-            owner.notify({
-                eventName: 'selectedChange',
-                object: owner,
-                direction: direction,
-                text: text
-            } as SelectedChangedEventData);
         }
     }
 
@@ -122,9 +115,16 @@ export class TNSStickySwitch extends StickySwitchBase {
 
     constructor() {
         super();
-        this._stickySwitch = new StickySwitch((value: boolean) => {
-            console.log('Value =>', value);
-            checkedProperty.nativeValueChange(this, value);
+        const owner = this;
+        this._stickySwitch = new StickySwitch((value: boolean, direction: any, text: any) => {
+            checkedProperty.nativeValueChange(owner, value);
+
+            owner.notify({
+                eventName: 'selectedChange',
+                object: owner,
+                direction: direction,
+                text: text
+            } as SelectedChangedEventData);
         });
         this.innerComponent = new StackLayout();
         this.innerComponent.bindingContext = this;

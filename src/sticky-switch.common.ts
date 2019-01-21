@@ -114,7 +114,7 @@ export const switchColorProperty = new Property<StickySwitchBase, string>(
 );
 switchColorProperty.register(StickySwitchBase);
 
-export const textColorProperty = new Property<StickySwitchBase, boolean>(
+export const textColorProperty = new Property<StickySwitchBase, string>(
     {
         name: 'textColor'
     }
