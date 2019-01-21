@@ -23,3 +23,7 @@ publish/src
 publish/package
 demo/report/report.html
 demo/report/stats.json
+src/*lock.json
+demo/*lock.json
+demo-ng/*lock.json
+demo-vue/*lock.json
